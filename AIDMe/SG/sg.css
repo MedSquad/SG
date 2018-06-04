@@ -15,5 +15,9 @@
     color: #3f3f3f;
     font-family: "Timew New Roman", Times, Serif;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 90px;
+}
+
+.nav-bar img {
+    hieght: 50px;
 }
