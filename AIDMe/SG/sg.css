@@ -1,6 +1,10 @@
 .top-head {
     background-color: #3f3f3f;
-    display: table;
+    width: 100%;
+}
+
+.top-head table {
+    table-layout: auto;
     width: 100%;
 }
 
