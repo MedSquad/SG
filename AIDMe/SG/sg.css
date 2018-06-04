@@ -1,5 +1,4 @@
 .top-head {
-    background-color: #3f3f3f;
     width: 100%;
 }
 
@@ -13,9 +12,8 @@
 }
 
 .top-head label {
-    color: #ffffff;
+    color: #3f3f3f;
     font-family: "Timew New Roman", Times, Serif;
-    font-style: oblique;
     font-weight: bold;
     font-size: 60px;
 }
