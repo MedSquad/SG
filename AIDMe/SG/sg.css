@@ -20,18 +20,20 @@
 }
 
 .nav-bar {
+    position: absolute;
+    right: 0px;
     float: right;
     padding: 10px;
 }
 
 .nav-bar img {
-    height: 50px;
+    height: 70px;
 }
 
 video {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 75%;
 }
 
