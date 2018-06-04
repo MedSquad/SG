@@ -5,6 +5,7 @@
 .top-head table {
     table-layout: auto;
     width: 100%;
+    text-align: center;
 }
 
 .top-head img {
@@ -18,6 +19,19 @@
     font-size: 90px;
 }
 
-.nav-bar img {
-    hieght: 50px;
+.nav-bar {
+    float: right;
+    padding: 10px;
 }
+
+.nav-bar img {
+    height: 50px;
+}
+
+video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
