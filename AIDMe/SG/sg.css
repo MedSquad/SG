@@ -1,8 +1,4 @@
 .top-head {
-    width: 100%;
-}
-
-.top-head table {
     table-layout: auto;
     width: 100%;
     text-align: center;
@@ -12,11 +8,11 @@
     height: 100px;
 }
 
-.top-head label {
+.top-head p {
     color: #3f3f3f;
     font-family: "Timew New Roman", Times, Serif;
     font-weight: bold;
-    font-size: 90px;
+    font-size: 15px;
 }
 
 .nav-bar {
