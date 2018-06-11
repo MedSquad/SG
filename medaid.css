@@ -11,6 +11,10 @@ a, p {
     text-decoration: none;
 }
 
+a:visited { color: #000000; }
+
+a:hover { color: #7db1e5; }
+
 .mymenu {
     background: #ffffff;
     width: 100%;
@@ -18,7 +22,7 @@ a, p {
     flex-direction: row;
 }
 
-.mymenu > a {
+.mymenu > div {
     flex: auto;
 }
 
