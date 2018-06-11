@@ -1,16 +1,45 @@
-
-.main-icons {
-    background-color: #000000;
+.myhead {
+    padding: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
 }
 
-.main-icons img {
-    height: 140px;
-}
-
-.main-icons label {
-    color: #ffffff;
-    font-family: "Timew New Roman", Times, Serif;
-    font-style: oblique;
-    font-weight: bold;
+a, p {
+    font-family: "Cutive Mono", "Average Sans", fantasy, sans-serif, Serif;
     font-size: 20px;
+    text-decoration: none;
+}
+
+.mymenu {
+    background: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.mymenu > a {
+    flex: auto;
+}
+
+.mylogo img {
+    width: 140px;
+}
+
+.icons {
+    padding: 20px;
+}
+
+.icons div {
+    background: #F6F6F6;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+.icons img {
+    display: block;
+    height: 80px;
 }

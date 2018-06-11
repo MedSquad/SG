@@ -1,32 +1,18 @@
-.top-head {
-    table-layout: auto;
+.myhead {
+    padding: 10px;
     width: 100%;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
 }
 
-.top-head img {
-    height: 100px;
+.mylogo1 > img {
+    width: 80px;
 }
 
-.top-head p {
-    color: #3f3f3f;
-    font-family: "Timew New Roman", Times, Serif;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.nav-bar {
-    display: flex;
-    flex-direction: column;
-}
-
-.nav-bar img {
-    width: 70px;
-}
-
-.oooo {
-    border: 4px solid;
-    border-radius: 20px;
+#cart {
+    align-self: center;
+    justify-self: center;
+    height: 30px;
 }
 
 video {
@@ -40,27 +26,18 @@ video {
     width: 30%;
 }
 
-#cart {
-    height: 50px;
-}
-
-.wrapper {
+.mybox {
+    width: 75%;
     text-align: center;
-    padding: 40px 10px 10px 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
 }
 
-.wrapper div {
-    background: #f6f6f6;
+.myproduct {
+    flex-direction: row;
 }
 
-.wrapper img {
-    height: 40px;
-    transform: translateY(-50%) scale(1.5);
-    background: #ffffff;
-    padding: 0px 10px 0px 10px;
+.mymenu a {
+    background: #000000;
+    color: #ffffff;
 }
+
 
