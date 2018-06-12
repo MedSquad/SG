@@ -1,8 +1,10 @@
 .myhead {
-    padding: 10px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 10% 80% 10%;
+    width: 96%;
+    display: flex;
+    flex-flow: row;
+    align-content: space-between;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 .mylogo1 > img {
@@ -42,6 +44,41 @@ video {
     flex-direction: row;
 }
 
-svg {
-    background: #000000;
+.items {
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    align-items: baseline;
+    justify-content: space-between;
 }
+
+@media all and (max-width: 800px) {
+    .myhead { flex-flow: column; }
+    .mymenu { flex-flow: column; }
+    .myproduct { flex-flow: column; }
+    .items { flex-flow: column; }
+}
+
+.items > div {
+    padding: 20px;
+    margin: 20px;
+}
+
+.items > div:hover > img {
+    transform: scale(1.3);
+}
+
+.items > div:hover > p {
+    color: #7db1e5;
+}
+
+.items > div > img {
+    height: 60px;
+}
+
+a.under { text-decoration: underline; }
+
+p { padding: 2px; }
+
+
