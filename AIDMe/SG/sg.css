@@ -14,8 +14,15 @@ video {
     position: fixed;
     right: 0;
     top: 0;
-    margin-top: 15px;
     margin-right: 15px;
+}
+
+#cart > a > label {
+    position: fixed;
+    right: 40px;
+    top: 13px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 #menu {
@@ -24,6 +31,10 @@ video {
     top: 0;
     padding-bottom: 31px;
     margin-left: 10px;
+}
+
+#menu > img {
+    height: 15px;
 }
 
 #mylogo {
@@ -38,7 +49,7 @@ video {
     top: 0;
     left: 0;
     width: 100%;
-    height: 95px;
+    height: 60px;
     background: #3f3f3f;
 }
 
@@ -47,7 +58,7 @@ video {
     top: 0;
     left: 0;
     width: 100%;
-    height: 95px;
+    height: 60px;
     display: flex;
     flex-flow: row;
     align-content: space-between;
@@ -58,17 +69,11 @@ video {
 
 .header > div { margin-right: 10%; }
 
-#mylogo > a > img { height: 60px; }
-
-.mybox {
-    width: 55%;
-    font-family: "Open Sans", Georgia, Verdana;
-    text-align: center;
+#mylogo > a > img {
+    height: 50px;
+    margin: 0;
+    margin-top: 5px;
 }
-
-.mybox > h1,p { padding: 30px 0 30px 0; }
-
-.myproduct { flex-direction: row; }
 
 .items {
     margin-top: 95px;
@@ -83,7 +88,7 @@ video {
     width: 100%;
 }
 
-.items > div > p,h1 {
+.items > div > p,h1,label {
     margin-left: 25%;
     max-width: 500px;
 }
@@ -104,7 +109,7 @@ video {
 	flex-flow: column;
 	align-content: flex-start;
 	align-items: flex-start;
-	top: 95px;
+	top: 60px;
 	z-index: -2;
 	visibility: hidden;
     }
@@ -113,7 +118,11 @@ video {
     }
     #menu:hover > .header {
 	visibility: visible;
-	padding-top: 40px;
+	padding-top: 50px;
+    }
+    #cart > a > label {
+	margin-right: 20px;
+	margin-top: 5px;
     }
     .mymenu { flex-flow: column; }
     .myproduct { flex-flow: column; }
@@ -127,7 +136,3 @@ video {
 
 a.under { text-decoration: underline; }
 
-.intro {
-    color: white;
-    background: #3f3f3f;
-}
