@@ -1,23 +1,7 @@
-.myhead {
-    width: 96%;
-    display: flex;
-    flex-flow: row;
-    align-content: space-between;
-    align-items: baseline;
-    justify-content: space-between;
-}
-
-.mylogo1 > img {
-    width: 80px;
-}
-
-#cart {
-    align-self: center;
-    justify-self: center;
+img {
+    margin: 15px;
     height: 30px;
 }
-
-h1 { font-size: 100% }
 
 video {
     display: block;
@@ -26,8 +10,44 @@ video {
     width: 75%;
 }
 
-.minimal video {
-    width: 30%;
+#cart {
+    position: absolute;
+    right: 9px;
+    top: 10px;
+    background: #000000;
+    padding: 13px;
+}
+
+#menu {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    padding: 13px;
+}
+
+#mylogo {
+    position: absolute;
+    left: 65px;
+    top: 0;
+    padding: 13px;
+}
+
+.myhead {
+    height: 95px;
+    display: flex;
+    flex-flow: row;
+    align-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
+    background: #3f3f3f;
+}
+
+.myhead > div {
+    margin-right: 10%;
+}
+
+#mylogo > a > img {
+    height: 60px;
 }
 
 .mybox {
@@ -45,7 +65,6 @@ video {
 }
 
 .items {
-    width: 80%;
     display: flex;
     flex-flow: row wrap;
     align-content: space-between;
@@ -54,31 +73,36 @@ video {
 }
 
 @media all and (max-width: 800px) {
-    .myhead { flex-flow: column; }
+    .myhead {
+	flex-flow: column;
+	align-content: flex-start;
+	align-items: flex-start;
+	padding-top: 100px;
+    }
     .mymenu { flex-flow: column; }
     .myproduct { flex-flow: column; }
     .items { flex-flow: column; }
 }
 
 .items > div {
+    width: 100%;
     padding: 20px;
     margin: 20px;
 }
 
-.items > div:hover > img {
+.items > div > a:hover > img {
     transform: scale(1.3);
 }
 
-.items > div:hover > p {
-    color: #7db1e5;
-}
-
-.items > div > img {
-    height: 60px;
+.items > div > p {
+    width: 500px;
 }
 
 a.under { text-decoration: underline; }
 
 p { padding: 2px; }
 
-
+.intro {
+    color: white;
+    background: #3f3f3f;
+}

@@ -1,8 +1,8 @@
 .myhead {
-    padding: 10px;
     width: 100%;
     display: grid;
     grid-template-columns: 20% 80%;
+    background: #3f3f3f;
 }
 
 a, p {
@@ -11,23 +11,19 @@ a, p {
     text-decoration: none;
 }
 
-a:visited { color: #000000; }
+a:visited { color: white; }
 
 a:hover { color: #7db1e5; }
 
 .mymenu {
-    background: #ffffff;
     width: 100%;
     display: flex;
     flex-direction: row;
+    background: #3f3f3f;
 }
 
 .mymenu > div {
     flex: auto;
-}
-
-.mylogo img {
-    width: 140px;
 }
 
 .icons {
@@ -38,12 +34,13 @@ a:hover { color: #7db1e5; }
     background: #F6F6F6;
 }
 
+.icons img {
+    display: block;
+    height: 80px;
+}
+
 .center {
     margin: auto;
     text-align: center;
 }
 
-.icons img {
-    display: block;
-    height: 80px;
-}
