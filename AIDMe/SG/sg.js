@@ -6,7 +6,7 @@ window.onload = function() {
 	var content = link.import;
 
 	// HEAD
-	content.querySelectorAll('div').forEach( e => e.cloneNode(true));
+	content.querySelectorAll('div').forEach( e => document.body.appendChild(e.cloneNode(true)));
     }();
 };
 
