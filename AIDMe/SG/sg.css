@@ -99,6 +99,7 @@ video {
 }
 
 @media all and (max-width: 800px) {
+    p,h1,a { font-size: 90%; }
     .header {
 	flex-flow: column;
 	align-content: flex-start;
@@ -112,7 +113,7 @@ video {
     }
     #menu:hover > .header {
 	visibility: visible;
-	padding-top: 100px;
+	padding-top: 40px;
     }
     .mymenu { flex-flow: column; }
     .myproduct { flex-flow: column; }
