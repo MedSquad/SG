@@ -11,28 +11,42 @@ video {
 }
 
 #cart {
-    position: absolute;
-    right: 9px;
-    top: 10px;
-    background: #000000;
-    padding: 13px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-top: 15px;
+    margin-right: 15px;
 }
 
 #menu {
-    position: absolute;
+    position: fixed;
     left: 5px;
-    top: 10px;
-    padding: 13px;
+    top: 0;
+    padding-bottom: 31px;
+    margin-left: 10px;
 }
 
 #mylogo {
-    position: absolute;
-    left: 65px;
+    position: fixed;
+    left: 60px;
     top: 0;
-    padding: 13px;
+    margin-left: 25px;
 }
 
-.myhead {
+#head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95px;
+    background: #3f3f3f;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 95px;
     display: flex;
     flex-flow: row;
@@ -42,13 +56,9 @@ video {
     background: #3f3f3f;
 }
 
-.myhead > div {
-    margin-right: 10%;
-}
+.header > div { margin-right: 10%; }
 
-#mylogo > a > img {
-    height: 60px;
-}
+#mylogo > a > img { height: 60px; }
 
 .mybox {
     width: 55%;
@@ -56,15 +66,12 @@ video {
     text-align: center;
 }
 
-.mybox > h1,p {
-    padding: 30px 0 30px 0;
-}
+.mybox > h1,p { padding: 30px 0 30px 0; }
 
-.myproduct {
-    flex-direction: row;
-}
+.myproduct { flex-direction: row; }
 
 .items {
+    margin-top: 95px;
     display: flex;
     flex-flow: row wrap;
     align-content: space-between;
@@ -72,35 +79,42 @@ video {
     justify-content: space-between;
 }
 
+.items > div {
+    width: 100%;
+}
+
+.items > div > p,h1 {
+    margin-left: 25%;
+    max-width: 500px;
+}
+
 @media all and (max-width: 800px) {
-    .myhead {
+    .header {
 	flex-flow: column;
 	align-content: flex-start;
 	align-items: flex-start;
+	top: 95px;
+	z-index: -2;
+	visibility: hidden;
+    }
+    .header > div {
+	margin-bottom: 15px;
+    }
+    #menu:hover > .header {
+	visibility: visible;
 	padding-top: 100px;
     }
     .mymenu { flex-flow: column; }
     .myproduct { flex-flow: column; }
     .items { flex-flow: column; }
-}
-
-.items > div {
-    width: 100%;
-    padding: 20px;
-    margin: 20px;
+    .items > div > p,h1,a { margin: 20px; }
 }
 
 .items > div > a:hover > img {
     transform: scale(1.3);
 }
 
-.items > div > p {
-    width: 500px;
-}
-
 a.under { text-decoration: underline; }
-
-p { padding: 2px; }
 
 .intro {
     color: white;
