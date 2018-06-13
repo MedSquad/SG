@@ -1,14 +1,13 @@
 "use strict";
 
-var myapp = {};
-
 window.onload = function() {
+    function() {
+	var link = document.querySelector('link[rel="import"]');;
+	var content = link.import;
 
-    const DIVS = document.querySelectorAll('div.myhead > div');
-
-    myapp.displayMenu = function() {
-	DIVS.forEach( div => { div.style.visibility = 'visible'; } );
-    };
+	// HEAD
+	document.body.appendChild(content.querySelector('#head').cloneNode(true));
+    }();
 };
 
 
