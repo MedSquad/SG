@@ -88,6 +88,16 @@ video {
     max-width: 500px;
 }
 
+.items > div > p {
+    text-align: justify;
+    text-justify: auto;
+}
+
+.items > div > p > img {
+    height: 300px;
+    max-width: 500px;
+}
+
 @media all and (max-width: 800px) {
     .header {
 	flex-flow: column;
