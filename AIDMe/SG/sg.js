@@ -8,28 +8,22 @@ window.onload = function() {
 	    return (Number.isNaN(n) ? 0 : n);
 	}
 
+	let header = ['',
+    '<div id="head"></div>',
+    '<div id="menu">',
+	'<div class="header">',
+	    '<div><a href="manual.html">Manual</a></div>',
+	    '<div><a href="">Literatura</a></div>',
+	    '<div><a href="contacto.html">Contacto</a></div>',
+	'</div>',
+	'<img src="burger.svg">',
+    '</div>',
+    '<div id="mylogo"><a href="index.html"><img src="logoSGI.svg"></a></div>',
+    '<div id="cart" class="center"><a href="comprar.html"><label></label><img src="empty-cart.svg"></a> </div>'
+	].join('');
+
+	document.body.insertAdjacentHTML('afterbegin', header);
 	let PZ = document.getElementById('cart').firstChild.firstChild;
-
-	app.add2cart = function(e) {
-	    let v = asnum(e.value);
-	    const n = e.name;
-	    if (v > 0) {
-		sessionStorage.setItem(n, v);
-		v += asnum(e.parentElement.textContent);
-		sessionStorage.setItem(n, v);
-		PZ.textContent = v;
-	    } else {
-		PZ.textContent = '';
-		sessionStorage.removeItem(n);
-	    }
-	};
-
-	app.ordenes = function() {
-	    for(let i = 0; i < sessionStorage.length; i++) {
-		let k = sessionStorage.key(i);
-		document.querySelector('input[name="'+k+'"]').value = asnum(sessionStorage.getItem(k));
-	    }
-	}
 
 	if (sessionStorage.length > 0) {
 	    let count = 0;
@@ -39,5 +33,8 @@ window.onload = function() {
 	    }
 	    PZ.textContent = count;
 	}
+
+	app.asnum = asnum;
+	app.PZ = PZ;
 };
 
