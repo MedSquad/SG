@@ -11,18 +11,33 @@ window.onload = function() {
 	let PZ = document.getElementById('cart').firstChild.firstChild;
 
 	app.add2cart = function(e) {
-	    const v = asnum(e.value);
+	    let v = asnum(e.value);
 	    const n = e.name;
 	    if (v > 0) {
 		sessionStorage.setItem(n, v);
-		let v1 = v + asnum(e.parentElement.textContent);
-		sessionStorage.setItem(n, v1);
-		console.log(sessionStorage.getItem(n));
-		PZ.textContent = v1;
-	    } else
+		v += asnum(e.parentElement.textContent);
+		sessionStorage.setItem(n, v);
+		PZ.textContent = v;
+	    } else {
 		PZ.textContent = '';
+		sessionStorage.removeItem(n);
+	    }
 	};
 
-};
+	app.ordenes = function() {
+	    for(let i = 0; i < sessionStorage.length; i++) {
+		let k = sessionStorage.key(i);
+		document.querySelector('input[name="'+k+'"]').value = asnum(sessionStorage.getItem(k));
+	    }
+	}
 
+	if (sessionStorage.length > 0) {
+	    let count = 0;
+	    for(let i = 0; i < sessionStorage.length; i++) {
+		let k = sessionStorage.key(i);
+		count += asnum(sessionStorage.getItem(k));
+	    }
+	    PZ.textContent = count;
+	}
+};
 
