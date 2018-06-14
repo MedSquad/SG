@@ -99,7 +99,7 @@ video {
 }
 
 .items > div > p > img {
-    height: 300px;
+    height: auto;
     max-width: 500px;
 }
 
@@ -128,6 +128,7 @@ video {
     .myproduct { flex-flow: column; }
     .items { flex-flow: column; }
     .items > div > p,h1,a { margin: 20px; }
+    .items > div > p > img { max-width: 95%; }
 }
 
 .items > div > a:hover > img {
