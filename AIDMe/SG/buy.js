@@ -1,29 +1,44 @@
 "use strict";
 
     (function() {
-	let asnum = app.asnum;
-	let PZ = app.PZ;
 
-	app.add2cart = function(e) {
-	    let v = asnum(e.value);
+	function suma() {
+	    let s = 0;
+	    for(let i = 0; i < sessionStorage.length; i++) {
+		s += app.asnum(sessionStorage.getItem(sessionStorage.key(i)));
+	    }
+	    return s;
+	}
+
+	let add2cart = function(ev) {
+	    let e = ev.target;
+	    let v = app.asnum(e.value);
+	    let PZ = app.PZ;
 	    const n = e.name;
 	    if (v > 0) {
 		sessionStorage.setItem(n, v);
-		v += asnum(e.parentElement.textContent);
+		v += app.asnum(e.parentElement.textContent);
 		sessionStorage.setItem(n, v);
-		PZ.textContent = v;
+		PZ.textContent = suma();
 	    } else {
 		PZ.textContent = '';
 		sessionStorage.removeItem(n);
 	    }
 	};
 
-	app.ordenes = function() {
+	let ordenes = function() {
 	    for(let i = 0; i < sessionStorage.length; i++) {
 		let k = sessionStorage.key(i);
-		document.querySelector('input[name="'+k+'"]').value = asnum(sessionStorage.getItem(k));
+		document.querySelector('input[name="'+k+'"]').value = app.asnum(sessionStorage.getItem(k));
 	    }
-	}
+	};
 
+	let myinputs = function(ie) {
+	    ie.value = 0; ie.step = 1; ie.min = 0; ie.max = 10;
+	    ie.addEventListener('change', add2cart);
+	};
+
+	app.addload( () => document.querySelectorAll('input').forEach( myinputs ) );
+	app.addload( ordenes );
 
     })();

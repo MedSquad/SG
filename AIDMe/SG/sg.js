@@ -39,3 +39,12 @@ window.onload = function() {
 	app.PZ = PZ;
 };
 
+app.addload = function( f ) {
+    let oldload = window.onload;
+    window.onload = function() {
+	oldload();
+	f();
+    }
+};
+
+

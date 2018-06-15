@@ -1,3 +1,8 @@
+input {
+    max-width: 50px;
+    margin-left: 20px;
+}
+
 a { color: white; }
 
 a, p, label {
@@ -16,6 +21,9 @@ a:hover { color: #7db1e5; }
 .quinientos {
     height: auto;
     max-width: 500px;
+
+    border: 15px solid black;
+    border-radius: 20px;
 }
 
 .cuarto {
@@ -23,12 +31,15 @@ a:hover { color: #7db1e5; }
 }
 
 .doscientos {
-    max-width: 200px;
+    max-width: 150px;
     height: auto;
-    margin-left: 20px;
+    margin-left: 50px;
+    border: 2px solid grey;
+    padding: 5px;
+    border-radius: 20px;
 }
 
-.items > div > p >  a:hover > img {
+a:hover > img.doscientos {
     transform: scale(1.3);
 }
 
@@ -117,6 +128,7 @@ video {
     align-content: space-between;
     align-items: baseline;
     justify-content: space-between;
+    width: 95%;
 }
 
 .items > div {
@@ -130,8 +142,8 @@ video {
 }
 
 @media all and (max-width: 800px) {
-    p,h1,a { font-size: 90%; }
-    img.cuarto { max-width: 75%; height: auto; }
+    p,h1,a,label { font-size: 90%; }
+    img.cuarto { max-width: 75%; height: auto; margin-left: 10%; }
     img.doscientos { max-width: 20%; height: auto; }
     .header {
 	flex-flow: column;

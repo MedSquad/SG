@@ -4,7 +4,6 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<title>SG - Smart Goggles</title>
-	<link rel="stylesheet" href="../../medaid.css">
 	<link rel="stylesheet" href="sg.css">
 	<script type="text/javascript" src="sg.js"></script>
 	<script type="text/javascript" src="buy.js"></script>
@@ -12,9 +11,14 @@
 <body>
     <div class="items">
 	<div>
-	    <h1>Modelo con 2 c&aacute;maras</h1>
-	    <p><img src="modeloA.jpeg"></p>
-	    <label>Ordenar: <input type="number" name="modeloA" value="0" step="1" min="0" max="10" onchange="app.add2cart(this)"> pieza(s).</label>
+	    <img src="modeloA.jpeg" class="quinientos cuarto">
+	    <table>
+		<tbody>
+		    <tr><td>Modelo con 1 c&aacute;mara:</td><td><input type="number" name="modeloA"> pieza(s).</td></tr>
+		    <tr><td>Modelo con 2 c&aacute;maras:</td><td><input type="number" name="modeloB"> pieza(s).</td></tr>
+		</tbody>
+	    </table>
+	    <p><label>.</label></p>
 	</div>
     </div>
 </body>
