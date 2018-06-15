@@ -12,18 +12,19 @@ window.onload = function() {
     '<div id="head"></div>',
     '<div id="menu">',
 	'<div class="header">',
+	    '<div><a href="descripcion.html">Descripci&oacute;n</a></div>',
 	    '<div><a href="manual.html">Manual</a></div>',
 	    '<div><a href="">Literatura</a></div>',
 	    '<div><a href="contacto.html">Contacto</a></div>',
 	'</div>',
-	'<img src="burger.svg">',
+	'<img src="burger.svg" class="icon">',
     '</div>',
-    '<div id="mylogo"><a href="index.html"><img src="logoSGI.svg"></a></div>',
-    '<div id="cart" class="center"><a href="comprar.html"><label></label><img src="empty-cart.svg"></a> </div>'
+    '<div id="mylogo"><a href="index.html"><img src="logoSGI.svg" class="icon"></a></div>',
+    '<div id="cart"><a href="comprar.html"><label id="qty"></label><img src="empty-cart.svg" class="icon"></a> </div>'
 	].join('');
 
 	document.body.insertAdjacentHTML('afterbegin', header);
-	let PZ = document.getElementById('cart').firstChild.firstChild;
+	let PZ = document.getElementById('qty');
 
 	if (sessionStorage.length > 0) {
 	    let count = 0;

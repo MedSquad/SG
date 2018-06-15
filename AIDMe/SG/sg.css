@@ -1,6 +1,35 @@
-img {
+a { color: white; }
+
+a, p, label {
+    font-family: "Cutive Mono", "Average Sans", fantasy, sans-serif, Serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a:hover { color: #7db1e5; }
+
+.icon {
     margin: 15px;
     height: 30px;
+}
+
+.quinientos {
+    height: auto;
+    max-width: 500px;
+}
+
+.cuarto {
+    margin-left: 25%;
+}
+
+.doscientos {
+    max-width: 200px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.items > div > p >  a:hover > img {
+    transform: scale(1.3);
 }
 
 video {
@@ -17,7 +46,7 @@ video {
     margin-right: 15px;
 }
 
-#cart > a > label {
+#qty {
     position: fixed;
     right: 40px;
     top: 13px;
@@ -86,11 +115,7 @@ video {
 
 .items > div {
     width: 100%;
-}
-
-.items > div > p,h1,label {
-    margin-left: 25%;
-    max-width: 500px;
+    margin-left: 5%;
 }
 
 .items > div > p {
@@ -98,13 +123,10 @@ video {
     text-justify: auto;
 }
 
-.items > div > p > img {
-    height: auto;
-    max-width: 500px;
-}
-
 @media all and (max-width: 800px) {
     p,h1,a { font-size: 90%; }
+    img.cuarto { max-width: 75%; height: auto; }
+    img.doscientos { max-width: 20%; height: auto; }
     .header {
 	flex-flow: column;
 	align-content: flex-start;
@@ -118,21 +140,14 @@ video {
     }
     #menu:hover > .header {
 	visibility: visible;
-	padding-top: 50px;
+	padding-top: 90px;
     }
-    #cart > a > label {
-	margin-right: 20px;
-	margin-top: 5px;
-    }
-    .mymenu { flex-flow: column; }
-    .myproduct { flex-flow: column; }
+    #qty { margin-top: 5px; }
     .items { flex-flow: column; }
-    .items > div > p,h1,a { margin: 20px; }
-    .items > div > p > img { max-width: 95%; }
-}
-
-.items > div > a:hover > img {
-    transform: scale(1.3);
+    .items > div {
+	margin: 20px;
+	max-width: 95%;
+    }
 }
 
 a.under { text-decoration: underline; }
