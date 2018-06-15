@@ -19,7 +19,7 @@ window.onload = function() {
 	'</div>',
 	'<img src="burger.svg" class="icon">',
     '</div>',
-    '<div id="mylogo"><a href="index.html"><img src="logoSGI.svg" class="icon"></a></div>',
+    '<div id="mylogo"><a href="index.html"><img src="logoSGI.svg" class="icon"><label id="brand">SmartGoggles</label></a></div>',
     '<div id="cart"><a href="comprar.html"><label id="qty"></label><img src="empty-cart.svg" class="icon"></a> </div>'
 	].join('');
 

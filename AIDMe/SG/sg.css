@@ -73,6 +73,12 @@ video {
     margin-left: 25px;
 }
 
+#brand {
+    position: fixed;
+    left: 130px;
+    top: 20px;
+}
+
 #head {
     position: fixed;
     top: 0;
