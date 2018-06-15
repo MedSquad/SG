@@ -5,6 +5,13 @@ input {
 
 a { color: white; }
 
+a[href^="tel:"] { color: black; }
+
+a[href^="tel:"]:before {
+    content: "\260e";
+    margin-right: 0.5em;
+}
+
 a, p, label {
     font-family: "Cutive Mono", "Average Sans", fantasy, sans-serif, Serif;
     font-size: 20px;
