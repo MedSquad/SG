@@ -12,6 +12,8 @@ a[href^="tel:"]:before {
     margin-right: 0.5em;
 }
 
+td { font-size: 18px; }
+
 a, p, label {
     font-family: "Cutive Mono", "Average Sans", fantasy, sans-serif, Serif;
     font-size: 20px;
