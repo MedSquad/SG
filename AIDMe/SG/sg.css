@@ -35,10 +35,6 @@ a:hover { color: #7db1e5; }
     border-radius: 20px;
 }
 
-.cuarto {
-    margin-left: 25%;
-}
-
 .doscientos {
     max-width: 150px;
     height: auto;
@@ -141,8 +137,8 @@ video {
 }
 
 .items > div {
-    width: 100%;
-    margin-left: 5%;
+    max-width: 40%;
+    margin-left: 25%;
 }
 
 .items > div > p {
@@ -152,7 +148,6 @@ video {
 
 @media all and (max-width: 800px) {
     p,h1,a,label { font-size: 90%; }
-    img.cuarto { max-width: 75%; height: auto; margin-left: 10%; }
     img.doscientos { max-width: 20%; height: auto; }
     .header {
 	flex-flow: column;
@@ -175,6 +170,7 @@ video {
 	margin: 20px;
 	max-width: 95%;
     }
+    .quinientos { max-width: 95%; }
 }
 
 a.under { text-decoration: underline; }
