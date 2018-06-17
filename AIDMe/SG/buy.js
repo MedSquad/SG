@@ -21,8 +21,9 @@
 		sessionStorage.setItem(n, v);
 		PZ.textContent = suma();
 	    } else {
-		PZ.textContent = '';
 		sessionStorage.removeItem(n);
+		let s = suma();
+		PZ.textContent = (s == 0)?'':s;
 	    }
 	};
 

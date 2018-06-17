@@ -14,7 +14,6 @@ window.onload = function() {
 	'<div class="header">',
 	    '<div><a href="descripcion.html">Descripci&oacute;n</a></div>',
 	    '<div><a href="manual.html">Manual</a></div>',
-	    '<div><a href="">Literatura</a></div>',
 	    '<div><a href="contacto.html">Contacto</a></div>',
 	'</div>',
 	'<img src="burger.svg" class="icon">',
