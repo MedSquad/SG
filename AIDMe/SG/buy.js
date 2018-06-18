@@ -2,13 +2,7 @@
 
     (function() {
 
-	function suma() {
-	    let s = 0;
-	    for(let i = 0; i < sessionStorage.length; i++) {
-		s += app.asnum(sessionStorage.getItem(sessionStorage.key(i)));
-	    }
-	    return s;
-	}
+	let suma = app.suma;
 
 	let add2cart = function(ev) {
 	    let e = ev.target;
@@ -35,7 +29,7 @@
 	};
 
 	let myinputs = function(ie) {
-	    ie.value = 0; ie.step = 1; ie.min = 0; ie.max = 10;
+	    ie.step = 1; ie.min = 0; ie.max = 10;
 	    ie.addEventListener('change', add2cart);
 	};
 

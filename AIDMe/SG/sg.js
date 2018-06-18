@@ -6,7 +6,15 @@ window.onload = function() {
 	let asnum = function(s) {
 	    let n = Number(s);
 	    return (Number.isNaN(n) ? 0 : n);
-	}
+	};
+
+	let suma = function() {
+	    if (sessionStorage.length == 0) { return 0; }
+	    let s = 0;
+	    for(let i = 0; i < sessionStorage.length; i++)
+		s += asnum(sessionStorage.getItem(sessionStorage.key(i)));
+	    return s;
+	};
 
 	let header = ['',
     '<div id="head"></div>',
@@ -25,16 +33,13 @@ window.onload = function() {
 	document.body.insertAdjacentHTML('afterbegin', header);
 	let PZ = document.getElementById('qty');
 
-	if (sessionStorage.length > 0) {
-	    let count = 0;
-	    for(let i = 0; i < sessionStorage.length; i++) {
-		let k = sessionStorage.key(i);
-		count += asnum(sessionStorage.getItem(k));
-	    }
-	    PZ.textContent = count;
-	}
+	let ss = suma();
+
+	if (ss > 0)
+	    PZ.textContent = ss;
 
 	app.asnum = asnum;
+	app.suma = suma;
 	app.PZ = PZ;
 };
 

@@ -3,6 +3,8 @@ input {
     margin-left: 20px;
 }
 
+input[type="number"] { text-align: right; }
+
 a { color: white; }
 
 a[href^="tel:"] { color: black; }
