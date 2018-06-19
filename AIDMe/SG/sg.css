@@ -32,9 +32,6 @@ a:hover { color: #7db1e5; }
 .quinientos {
     height: auto;
     max-width: 500px;
-
-    border: 15px solid black;
-    border-radius: 20px;
 }
 
 .doscientos {
