@@ -17,6 +17,28 @@
 -->
 	</div>
     </div>
+
+    <form id="gform" method="POST" action="">
+	<div class="contacto">
+	    <div>
+		<label for="nombre">Nombre:<br></label>
+		<input id="nombre" name="nombre" placeholder="Nombre(s) Apellido(s)" />
+	    </div>
+	    <div>
+		<label for="mensaje">Mensaje:<br></label>
+		<textarea id="mensaje" name="mensaje" rows="10" placeholder="Por favor escribe tus comentarios..."></textarea>
+	    </div>
+	    <div>
+		<label for="email"><em>Tu</em> correo electr&oacute;nico:<br></label>
+		<input id="email" name="email" type="email" value="" required placeholder="nombre@email.com"/>
+		<span class="email-invalid" style="display:none">Direcci&oacute;n de correo inv&aacute;lido.</span>
+	    </div>
+	    <button class="button-success pure-button button-xlarge">
+	    <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+	</div>
+    </form>
+
+
 </body>
 </html>
 
