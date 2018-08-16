@@ -1,0 +1,22 @@
+.pico {
+    margin-top: 60px;
+    height: 40px;
+}
+
+label, p { font-family: monospace; }
+
+.typewriter {
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 5s steps(40, end);
+}
+
+@keyframes typing {
+    from {
+	opacity: 0;
+    }
+    to {
+	opacity: 1;
+    }
+}
+
