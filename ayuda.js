@@ -8,12 +8,13 @@
 	    return a;
 	}
 
-	function createL( txt ) {
+	function createL( o ) {
 	    let l = document.createElement('label');
 	    let a = document.createElement('a');
 	    a.href = "";
-	    a.innerHTML = txt;
+	    a.innerHTML = o.txt;
 	    l.appendChild( a );
+	    l.addEventListener('click', ()=>console.log("fer\n"));
 	    return l;
 	}
 
@@ -31,18 +32,29 @@
 	}
 
 	function guia(e) {
-	    let cb = app.CB;
-	    cb.removeChild(e.parentNode);
+//	    let cb = app.CB;
+		console.log(e);
+//console.log(	    cb.removeChild(e.parentNode));
+//	    let d = document.createElement('div');
+//	    d.classList.add('question');
+//	    d.appendChild( e.cloneNode(true) );
+//	    cb.appendChild( d );
+//	    cb.appendChild( createMenu([{txt:"Monoc&aacute;mara"}, {txt:"Bic&aacute;mara"}]) );
+	}
+
+	app.inicio = function() {
 	    let d = document.createElement('div');
-	    d.classList.add('question');
-	    d.appendChild( e.cloneNode(true) );
-	    cb.appendChild( d );
-	    cb.appendChild( createMenu(["Monoc&aacute;mara", "Bic&aacute;mara"]) );
+	    d.classList.add('answer');
+	    d.appendChild( createP('Hola!') );
+	    d.appendChild( createP('Gracias por usar los SmartGoggles, el equipo de MED-AID esta comprometido con la creaci&oacute;n de soluciones tecnol&oacute;gicas integrales.') );
+	    d.appendChild( createP('&#191;C&oacute;mo puedo ayudarte&#63;') );
+
+	    app.CB.appendChild( d );
+	    app.CB.appendChild( createMenu([{txt:"Gu&iacute;a de Uso", fn:guia}, {txt:"Reporte de Falla"}]) );
 	}
 
 	function getapps() {
 	    let d = document.createElement('div');
-	    f
 	    return d;
 	}
 
@@ -52,7 +64,5 @@
 	function bicam(e) {
 	}
 
-	app.guia = guia;
-
-	app.addload( () => { app.CB = document.getElementById("chatbot"); } );
+	app.addload( () => { app.CB = document.getElementById("chatbot"); app.inicio(); } );
     })();
