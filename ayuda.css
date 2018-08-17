@@ -1,22 +1,33 @@
-.pico {
-    margin-top: 60px;
-    height: 40px;
+body { background: #dcdcdc; }
+
+label {
+    color: white;
+    background-color: #3f3f3f;
+    padding: 6px;
+    margin: 3px;
+    border-radius: 40px;
 }
 
 label, p { font-family: monospace; }
 
-.typewriter {
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation: typing 5s steps(40, end);
+.items { flex-flow: column wrap; }
+
+.items > div { margin-bottom: 60px; }
+
+.answer {
+    background: white;
+    padding: 8px;
+    border-radius: 25px;
 }
 
-@keyframes typing {
-    from {
-	opacity: 0;
-    }
-    to {
-	opacity: 1;
-    }
+.question > label {
+    background: #7db1e5;
+    align: right;
+    border-radius: 25px;
 }
+
+.menuu > p { font-size: 90%; }
+
+.menuu > label > a { font-size: 0.8em; }
+
 
