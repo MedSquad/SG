@@ -1,0 +1,15 @@
+h1 {
+    font-size: 4em;
+    background: gray;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+section.slides {
+    margin-top: 80px;
+    margin-right: 8%;
+    margin-left: 8%;
+    display: none;
+}
+

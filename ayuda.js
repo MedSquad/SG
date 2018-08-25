@@ -14,7 +14,7 @@
 	    a.href = "";
 	    a.innerHTML = o.txt;
 	    l.appendChild( a );
-	    l.addEventListener('click', ()=>console.log("fer\n"));
+	    l.addEventListener('click', o.fn);
 	    return l;
 	}
 
@@ -31,16 +31,17 @@
 	    return d;
 	}
 
-	function guia(e) {
-//	    let cb = app.CB;
-		console.log(e);
-//console.log(	    cb.removeChild(e.parentNode));
-//	    let d = document.createElement('div');
-//	    d.classList.add('question');
-//	    d.appendChild( e.cloneNode(true) );
-//	    cb.appendChild( d );
-//	    cb.appendChild( createMenu([{txt:"Monoc&aacute;mara"}, {txt:"Bic&aacute;mara"}]) );
-	}
+	app.guia = function guia(e) {
+	    let ee = e.target;
+		console.log(ee);
+	    let cb = app.CB;
+	    cb.removeChild(ee.parentNode);
+	    let d = document.createElement('div');
+	    d.classList.add('question');
+	    d.appendChild( ee.cloneNode(true) );
+	    cb.appendChild( d );
+	    cb.appendChild( createMenu([{txt:"Monoc&aacute;mara"}, {txt:"Bic&aacute;mara"}]) );
+	};
 
 	app.inicio = function() {
 	    let d = document.createElement('div');
@@ -50,8 +51,8 @@
 	    d.appendChild( createP('&#191;C&oacute;mo puedo ayudarte&#63;') );
 
 	    app.CB.appendChild( d );
-	    app.CB.appendChild( createMenu([{txt:"Gu&iacute;a de Uso", fn:guia}, {txt:"Reporte de Falla"}]) );
-	}
+	    app.CB.appendChild( createMenu([{txt:"Gu&iacute;a de Uso", fn:app.guia}, {txt:"Reporte de Falla"}]) );
+	};
 
 	function getapps() {
 	    let d = document.createElement('div');
