@@ -28,6 +28,7 @@ ol>li {
 ol>li:before {
     content: counter(item);
     margin-right: 10px;
+    margin-top: 20px;
     padding: 5px;
     display: block;
     border-radius: 45%;
@@ -51,11 +52,12 @@ ol>li:before {
     right: 91%;
 }
 
-img.info-block {
-    height: 50px;
+img.cien {
+    height: 45px;
+    padding: 8px;
 }
 
-a:hover > img.icon {
+a:hover > img.cien {
     transform: scale(1.3);
 }
 
