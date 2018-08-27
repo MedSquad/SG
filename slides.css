@@ -39,11 +39,15 @@ section.slides {
     position: absolute;
     left: 55%;
     top: 45%;
-    padding: 5px;
-    border: 2px solid grey;
+    padding: 10px;
+    text-align: justify;
 }
 
 @media all and (max-width: 800px) {
     h1 { font-size: 1.7em; }
+    .info-block {
+	max-width: 30%;
+	top: 35%;
+    }
 }
  
