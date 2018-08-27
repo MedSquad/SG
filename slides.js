@@ -16,14 +16,15 @@ app.addload( function() {
     }
 
     function prevSlide() {
-	SLIDES[s].style.display = 'none';
-	SLIDES[r].style.display = 'block';
+	SLIDES[r].style.display = 'none';
 	s = r;
 	r = s == 0 ? N-1 : s-1;
+	SLIDES[r].style.display = 'block';
     }
 
     nextSlide();
-    app.nextS = nextSlide;
-    app.prevS = prevSlide;
+
+    document.getElementById("arrow-right").addEventListener("click", nextSlide);
+    document.getElementById("arrow-left").addEventListener("click", prevSlide);
 });
 

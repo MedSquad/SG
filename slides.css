@@ -1,5 +1,5 @@
 h1 {
-    font-size: 4em;
+    font-size: 3.8em;
     background: gray;
     color: white;
     padding: 10px;
@@ -13,3 +13,37 @@ section.slides {
     display: none;
 }
 
+.controls  {
+    max-width: 4%;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    position: fixed;
+    top: 50%;
+    bottom: 45%;
+    left: 4%;
+    right: 91%;
+}
+
+#arrow-right {
+    left: 91%;
+    right: 4%;
+}
+
+.controls:hover {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.info-block {
+    max-width: 35%;
+    position: absolute;
+    left: 55%;
+    top: 45%;
+    padding: 5px;
+    border: 2px solid grey;
+}
+
+@media all and (max-width: 800px) {
+    h1 { font-size: 1.7em; }
+}
+ 
