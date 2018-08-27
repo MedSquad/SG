@@ -13,8 +13,35 @@ section.slides {
     display: none;
 }
 
+ol {
+    counter-reset: item;
+    margin: 0;
+    padding-left: 0;
+}
+
+ol>li {
+    counter-increment: item;
+    list-style: none inside;
+    overflow: hidden;
+}
+
+ol>li:before {
+    content: counter(item);
+    margin-right: 10px;
+    padding: 5px;
+    display: block;
+    border-radius: 45%;
+    width: 22px;
+    background: blue;
+    color: white;
+    text-align: center;
+    font: 20px 'Lato', Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    float: left;
+}
+
 .controls  {
-    max-width: 4%;
+    width: 4%;
     opacity: 0.2;
     filter: alpha(opacity=20);
     position: fixed;
@@ -22,6 +49,14 @@ section.slides {
     bottom: 45%;
     left: 4%;
     right: 91%;
+}
+
+img.info-block {
+    height: 50px;
+}
+
+a:hover > img.icon {
+    transform: scale(1.3);
 }
 
 #arrow-right {
@@ -35,7 +70,7 @@ section.slides {
 }
 
 .info-block {
-    max-width: 35%;
+    width: 35%;
     position: absolute;
     left: 55%;
     top: 45%;
@@ -46,7 +81,7 @@ section.slides {
 @media all and (max-width: 800px) {
     h1 { font-size: 1.7em; }
     .info-block {
-	max-width: 30%;
+	width: 30%;
 	top: 35%;
     }
 }
