@@ -1,7 +1,6 @@
 "use strict";
 
 app.addload( function() {
-
     let SLIDES = document.body.querySelectorAll("section.slides");
     let N = SLIDES.length;
 

@@ -48,7 +48,7 @@
 	    d.classList.add('answer');
 	    d.appendChild( createP('Hola!') );
 	    d.appendChild( createP('Gracias por usar los SmartGoggles, el equipo de MED-AID esta comprometido con la creaci&oacute;n de soluciones tecnol&oacute;gicas integrales.') );
-	    d.appendChild( createP('&#191;C&oacute;mo puedo ayudarte&#63;') );
+	    d.appendChild( createP('&#191;C&oacute;mo puedo ayudar&#63;') );
 
 	    app.CB.appendChild( d );
 	    app.CB.appendChild( createMenu([{txt:"Gu&iacute;a de Uso", fn:app.guia}, {txt:"Reporte de Falla"}]) );
