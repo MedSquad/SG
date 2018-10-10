@@ -19,16 +19,26 @@ end
 local ret = sites.html()
 
 local style = [==[
-input {
+select {
+    width: 300px;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+input#registro {
+    width: 240px;
     padding: 0.5rem;
     border-radius: 4px;
     border: 1px solid #ddd;
+    background-image: url("user-circle.svg");
+    background-repeat: no-repeat;
+    background-position: 6px;
+    margin-top: 10px;
+    padding-left: 50px;
 }
 
-input:invalid + span:after {
-    content: 'x';
-    color: #f00;
-    padding-left: 5px;
+input#registro:invalid {
+    border: 3px solid #f00;
 }
 
 #mybox {
@@ -42,10 +52,9 @@ input:invalid + span:after {
 
 local body = [==[
     <div id="mybox">
-	<label for="nombre">Nombre</label>
 	<select id="nombre" name="nombre" required >
 	</select>
-	<label>Registro <input id="registro" name="registro" type="text" maxlength="6" minlength="3" value="01256" required /></label><span></span>
+	<input id="registro" name="registro" type="text" placeholder="REGISTRO ###### / ####" pattern="[0-9]{6}/[0-9]{4}" required />
 	<br />
 	<div id="container"><div id="filelist"></div></div>
 	<br />
@@ -61,8 +70,30 @@ local script = [==[
     let myname = document.getElementById("nombre");
     let myreg = document.getElementById("registro");
 
+    function addName( p ) {
+	let opt = document.createElement("option");
+	opt.value = p.id;
+	opt.appendChild(document.createTextNode(p.nombre)); myname.appendChild(opt);
+    }
+
+    let KEYS = new Set(["Backspace", "Delete", "Clear"]);
+    function registre( e ) {
+	let txt = e.target.value;
+	if(txt.length == 6) {
+	    txt += ' / ';
+	    e.target.value = txt;
+	}
+	if( KEYS.has(e.key) && txt.length == 9 ) {
+	    txt = txt.substring(0, 6);
+	    e.target.value = txt;
+	}
+    }
+
+    myreg.addEventListener('keyup', registre);
+    myreg.addEventListener('keydown', registre);
+
     var NOMBRES = ['', ];
-    XHR.getJSON("nombres.lua").then( a => a.forEach( p => { NOMBRES[p.id] = p.nombre; } ) );
+    XHR.getJSON("nombres.lua").then( a => a.forEach( p => { NOMBRES[p.id] = p.nombre; addName(p); } ) );
 
     let uploader = new plupload.Uploader({ 
 	runtimes: "html5, html4",
@@ -115,6 +146,7 @@ ret.set_title(read_file'myhead.html')
    .add_css(read_file'mystyle.css')
    .add_body(read_file'mybody.html')
    .add_script(read_file'plupload.full.min.js')
+   .add_script(read_file'xhr.js')
    .add_css(style)
    .add_body(body)
    .add_script(script, 'onloaded')
