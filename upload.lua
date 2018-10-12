@@ -41,6 +41,8 @@ input#registro:invalid {
     border: 3px solid #f00;
 }
 
+a#uploadfiles { display: none; }
+
 #mybox {
     margin-top: 95px;
     width: 95%;
@@ -54,7 +56,7 @@ local body = [==[
     <div id="mybox">
 	<select id="nombre" name="nombre" required >
 	</select>
-	<input id="registro" name="registro" type="text" placeholder="REGISTRO ###### / ####" pattern="[0-9]{6}/[0-9]{4}" required />
+	<input id="registro" name="registro" type="text" placeholder="No. Registro ###### / ####" pattern="[0-9]{6} / [0-9]{4}" required />
 	<br />
 	<div id="container"><div id="filelist"></div></div>
 	<br />
@@ -69,6 +71,8 @@ local script = [==[
     let flist = document.getElementById("filelist");
     let myname = document.getElementById("nombre");
     let myreg = document.getElementById("registro");
+    let pick = document.getElementById("pickfiles");
+    let enviar = document.getElementById("uploadfiles");
 
     function addName( p ) {
 	let opt = document.createElement("option");
@@ -89,7 +93,6 @@ local script = [==[
 	}
     }
 
-    myreg.addEventListener('keyup', registre);
     myreg.addEventListener('keydown', registre);
 
     var NOMBRES = ['', ];
@@ -115,7 +118,7 @@ local script = [==[
 	init: {
 	    PostInit: function() {
 		flist.innerHTML = "";
-		document.getElementById("uploadfiles").onclick = function() {
+		enviar.onclick = function() {
 		    uploader.start();
 		    return false;
 		};
