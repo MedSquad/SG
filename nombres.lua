@@ -2,5 +2,5 @@
 
 local json = require'carlos.json'
 
-print( json.sql2json{dbname='inr.db', tbname='nombres', clause='', QRY='SELECT * FROM nombres' } )
+print( json.sql2json{dbname='/db/inr.db', tbname='nombres', clause='', QRY='SELECT * FROM nombres' } )
 
