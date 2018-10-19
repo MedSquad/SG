@@ -145,7 +145,7 @@ local script = [==[
     uploader.init();
 ]==]
 
-ret.set_title(read_file'myhead.html')
+ret.set_head(read_file'myhead.html')
    .add_css(read_file'mystyle.css')
    .add_body(read_file'mybody.html')
    .add_script(read_file'plupload.full.min.js')
