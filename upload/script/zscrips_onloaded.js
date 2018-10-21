@@ -3,6 +3,7 @@
     let myreg = document.getElementById("registro");
     let pick = document.getElementById("pickfiles");
     let enviar = document.getElementById("uploadfiles");
+    let cmnts = document.getElementById("comentarios");
 
     function addName( p ) {
 	let opt = document.createElement("option");
@@ -37,7 +38,7 @@
 	multipart_params: {},
 
 	filters : {
-	    max_file_size : "50mb",
+	    max_file_size : "500mb",
 	    mime_types: [
 		{title: "MPGE-4 files", extensions: "mp4"},
 		{title : "QuickTime files", extensions: "mov"},
