@@ -4,6 +4,11 @@ select{
     border-radius: 4px;
 }
 
+textarea#comentarios {
+    width: 300px;
+    height: 80px;
+}
+
 input#registro {
     width: 240px;
     padding: 0.5rem;
