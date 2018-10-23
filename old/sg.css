@@ -1,0 +1,204 @@
+input {
+    max-width: 50px;
+    margin-left: 20px;
+}
+
+
+input[type="number"] { text-align: right; }
+
+a { color: white; }
+
+a[href^="tel:"] { color: black; }
+
+a[href^="tel:"]:before {
+    content: "\260e";
+    margin-right: 0.5em;
+}
+
+td { font-size: 18px; }
+
+a, p, label {
+    font-family: "Cutive Mono", "Average Sans", fantasy, sans-serif, Serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a:hover { color: #7db1e5; }
+
+.icon {
+    margin: 15px;
+    height: 30px;
+}
+
+.quinientos {
+    height: auto;
+    max-width: 500px;
+}
+
+.doscientos {
+    max-width: 150px;
+    height: auto;
+    margin-left: 50px;
+    border: 2px solid grey;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+a:hover > img.doscientos {
+    transform: scale(1.3);
+}
+
+video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+#cart {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-right: 15px;
+}
+
+#qty {
+    position: fixed;
+    right: 40px;
+    top: 13px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#menu {
+    position: fixed;
+    left: 5px;
+    top: 0;
+    padding-bottom: 31px;
+    margin-left: 10px;
+}
+
+#menu > img {
+    height: 15px;
+}
+
+#mylogo {
+    position: fixed;
+    left: 60px;
+    top: 0;
+    margin-left: 25px;
+}
+
+#brand {
+    position: fixed;
+    left: 130px;
+    top: 20px;
+}
+
+#head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #3f3f3f;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-flow: row;
+    align-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
+    background: #3f3f3f;
+}
+
+.header > div { margin-right: 10%; }
+
+#mylogo > a > img {
+    height: 50px;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.items {
+    margin-top: 95px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.items > div {
+    max-width: 40%;
+    margin-left: 25%;
+}
+
+.items > div > p {
+    text-align: justify;
+    text-justify: auto;
+}
+
+.contacto {
+    max-width: 40%;
+    margin-left: 25%;
+}
+
+.contacto > div {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contacto > div > textarea { width: 100%; }
+
+#email, #nombre {
+    max-width: 100%;
+    padding: 5px;
+    margin-left: 0;
+}
+
+.button-xlarge {
+    font-size: 125%;
+    float: right;
+}
+
+@media all and (max-width: 800px) {
+    p,h1,a,label { font-size: 90%; }
+    img.doscientos { max-width: 20%; height: auto; }
+    .header {
+	flex-flow: column;
+	align-content: flex-start;
+	align-items: flex-start;
+	margin-top: 40px;
+	z-index: -2;
+	visibility: hidden;
+    }
+    .header > div {
+	margin-bottom: 15px;
+    }
+    #menu:hover > .header {
+	visibility: visible;
+	padding-top: 90px;
+    }
+    #qty { margin-top: 5px; }
+    .items { flex-flow: column; }
+    .items > div {
+	margin: 20px;
+	max-width: 95%;
+    }
+    .contacto {
+	margin: 20px;
+	max-width: 95%;
+    }
+    .quinientos { max-width: 95%; }
+}
+
+a.under { text-decoration: underline; }
+
