@@ -64,7 +64,7 @@
 		setTimeout(function() {
 		    document.getElementById(file.id).remove();
 		    console.appendChild(document.createTextNode("\nArchivo enviado: " + file.name));
-		}, 500);
+		}, 2500);
 	    },
 	    BeforeUpload: function(up, files) {
 		up.settings.multipart_params.registro = myreg.value;
@@ -75,7 +75,7 @@
 		    myreg.value = '';
 		    myname.value = 1;
 		    cmnts.value = '';
-		}, 2500);
+		}, 500);
 	    },
 	    UploadProgress: function(up, file) {
 		document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + '%</span>';
