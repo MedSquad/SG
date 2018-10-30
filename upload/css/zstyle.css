@@ -25,8 +25,14 @@ input#registro:invalid { border: 3px solid #f00; }
 
 #mybox {
     margin-top: 95px;
+    margin-left: 30%;
     width: 95%;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
 }
+
+@media all and (max-width: 800px) {
+    #mybox { margin-left: 0px; }
+}
+
