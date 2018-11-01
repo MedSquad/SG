@@ -82,6 +82,7 @@
 	    },
 	    Error: function(up, err) {
 		console.appendChild(document.createTextNode("\nError #" + err.code + ": " + err.message));
+		setTimeout(() => flist.lastElementChild.remove(), 500);
 	    }
 	}
     });
