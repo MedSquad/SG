@@ -80,6 +80,13 @@ a.a_white { color: white; }
     margin-top: 5px;
 }
 
+#cart {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-right: 15px;
+}
+
 @media all and (max-width: 800px) {
     p,h1,a,label { font-size: 90%; }
     .header {
