@@ -9,11 +9,12 @@ a[href^="tel:"]:before {
 
 td { font-size: 18px; }
 
-a, p, label {
-    font-family: "Cutive Mono", "Average Sans", fantasy, sans-serif, Serif;
+body {
+    font-family: 'Noto Serif TC', sans-serif, Serif;
     font-size: 20px;
-    text-decoration: none;
 }
+
+a, p, label { text-decoration: none; }
 
 a:hover { color: #7db1e5; }
 
@@ -87,8 +88,16 @@ a.a_white { color: white; }
     margin-right: 15px;
 }
 
+#qty {
+    position: fixed;
+    right: 40px;
+    top: 13px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
 @media all and (max-width: 800px) {
-    p,h1,a,label { font-size: 90%; }
+    body { font-size: 90%; }
     .header {
 	flex-flow: column;
 	align-content: flex-start;
@@ -100,6 +109,7 @@ a.a_white { color: white; }
     .header > div {
 	margin-bottom: 15px;
     }
+    #qty { margin-top: 5px; }
     #menu:hover > .header {
 	visibility: visible;
 	padding-top: 90px;
